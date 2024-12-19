@@ -3,9 +3,9 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
@@ -13,21 +13,32 @@
   
   <header>
 
-    <b class="logo">PCM Restoration LLC</b>
+      <b class="logo">PCM Restoration LLC</b>
 
-    <nav>
-      <ul class="nav__links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="previousWork.html">Galleries</a></li>
+      <nav>
+        <ul class="nav__links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="previousWork.html">Galleries</a></li>
+        </ul>
+      </nav>
+      <a class="cta" href="contact.html">Contact</a>
+      
+
+      <p class="menu">Menu</p>
+      
+      <div class="dropdown">
+        <ul class="skib">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="previousWork.html">Galleries</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
       </ul>
-    </nav>
-    <a class="cta" href="contact.html">Contact</a>
-    <p class="menu cta">Menu</p>  
-    
+
   </header>
 
-  <div class="banner" id="contactBanner"">
+  <div class="banner" id="contactBanner">
     <h1>Contact Us Today</h1>
     
     <a class="cta" href="contact.html">Request a Free Quote</a>
@@ -57,6 +68,16 @@
     <p>Questions? Contact us at pcmr.information@gmail.com or submit a contact form</p> 
     
   </footer>
+
+  <script>
+    const menuButton = document.querySelector('.menu')
+    const dropdown = document.querySelector('.dropdown')
+
+    menuButton.onclick = function () {
+      dropdown.classList.toggle('open')
+      const isOpen = dropdown.classList.contains('open')
+    }
+  </script>
   
 </body>
 
