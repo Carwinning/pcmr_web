@@ -20,7 +20,16 @@
         </ul>
       </nav>
       <a class="cta" href="../contact.html">Contact</a>
-      <p class="menu cta">Menu</p>
+      <p class="menu">Menu</p>
+      
+      <div class="dropdown">
+        <ul class="skib">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="previousWork.html">Galleries</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </ul>
     </header>
 
     <div class="imageGallery" id="garageJob1">
@@ -35,6 +44,16 @@
       <img src="../Images/Jobs/Garage1/jg9.jpg" alt=jg9>
     </div>
     
+    <script>
+      const menuButton = document.querySelector('.menu')
+      const dropdown = document.querySelector('.dropdown')
+  
+      menuButton.onclick = function () {
+        dropdown.classList.toggle('open')
+        const isOpen = dropdown.classList.contains('open')
+      }
+    </script>
+
   </body>
 
 </html>

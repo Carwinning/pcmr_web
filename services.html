@@ -3,13 +3,13 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Services</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 
-  <body>
-    <header>
+<body>
+  <header>
 
       <b class="logo">PCM Restoration LLC</b>
 
@@ -21,7 +21,17 @@
         </ul>
       </nav>
       <a class="cta" href="contact.html">Contact</a>
-      <p class="menu cta">Menu</p>
+      
+      <p class="menu">Menu</p>
+      
+      <div class="dropdown">
+        <ul class="skib">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="previousWork.html">Galleries</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </ul>
     </header>
 
     <div class="galleryCollumn" id="servicesGallery">
@@ -71,6 +81,16 @@
       
       <!-- <img src="Images/Electrical/electricalIcon.jpg" class="galleryImage" alt=electrical> -->
     </div>
+
+    <script>
+      const menuButton = document.querySelector('.menu')
+      const dropdown = document.querySelector('.dropdown')
+  
+      menuButton.onclick = function () {
+        dropdown.classList.toggle('open')
+        const isOpen = dropdown.classList.contains('open')
+      }
+    </script>
 
     <footer id="footer">
     

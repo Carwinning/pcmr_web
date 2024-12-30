@@ -21,25 +21,39 @@
       </ul>
     </nav>
     <a class="cta" href="contact.html">Contact</a>
-    <p class="menu cta">Menu</p>
-
-  </header>
+    <p class="menu">Menu</p>
+      
+      <div class="dropdown">
+        <ul class="skib">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="previousWork.html">Galleries</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </ul>
+    </header>
   <br>
   <br>
   <h1><b>Services Galleries</b></h1>
   <br>
   <br>
-  <div class="imageGallery" id="galleryGallery">
-    <div class="galleryGalleryItem" id="Masonry">
-      <img src="Images/Masonry/masonryIcon.jpg" alt="mImg">
+  <div class="galleryCollumn" id="galleryGallery">
+    <div class="galleryItem" id="Masonry">
+      <div class="galleryImage">
+        <img src="Images/Masonry/masonryIcon.jpg" alt="mImg">
+      </div>
       <a href="../Galleries/Masonry.html"><h2>Masonry</h2></a>
     </div>
-    <div class="galleryGalleryItem" id="Electrical">
-      <img src="Images/Electrical/electricalIcon.jpg" alt="eImg">
+    <div class="galleryItem" id="Electrical">
+      <div class="galleryImage">
+        <img src="Images/Electrical/electricalIcon.jpg" alt="eImg">
+      </div>
       <a href="../Galleries/Electrical.html"><h2>Electrical</h2></a>
     </div>
-    <div class="galleryGalleryItem" id="Bathroom">
-      <img src="Images/Bathroom/bathroomIcon.png" alt="bImg">
+    <div class="galleryItem" id="Bathroom">
+      <div class="galleryImage">
+        <img src="Images/Bathroom/bathroomIcon.png" alt="bImg">
+      </div>
       <a href="../Galleries/Bathroom.html"><h2>Bathroom</h2></a>
     </div>
   </div>
@@ -50,17 +64,31 @@
   <h1><b>Previous Jobs Galleries</b></h1>
   <br>
   <br>
-  <div class="imageGallery" id="galleryGallery">
-    <div class="galleryGalleryItem" id="Garage1">
-      <img src="Images/Jobs/Garage1/jg8.jpg" alt="gImg">
+  <div class="galleryCollumn" id="galleryGallery">
+    <div class="galleryItem" id="Garage1">
+      <div class="galleryImage" id="Bathroom">
+        <img src="Images/Jobs/Garage1/jg8.jpg" alt="gImg">
+      </div>
       <a href="../Galleries/jobGarage1.html"><h2>Garage 1</h2></a>
     </div>
-    <div class="galleryGalleryItem" id="Stamp1">
-      <img src="Images/Jobs/Stamp1/js3.jpg" alt="sImg">
+    <div class="galleryItem" id="Stamp1">
+      <div class="galleryImage" id="Bathroom">
+        <img src="Images/Jobs/Stamp1/js3.jpg" alt="sImg">
+      </div>
       <a href="../Galleries/jobStamp1.html"><h2>Concrete Stamp 1</h2></a>
     </div>
   </div>
 
+  <script>
+    const menuButton = document.querySelector('.menu')
+    const dropdown = document.querySelector('.dropdown')
+
+    menuButton.onclick = function () {
+      dropdown.classList.toggle('open')
+      const isOpen = dropdown.classList.contains('open')
+    }
+  </script>
+  
   <footer id="footer">
     
     <p>Questions? Contact us at pcmr.information@gmail.com or submit a contact form</p> 
