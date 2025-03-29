@@ -32,7 +32,18 @@ footer {
 .body {
   padding-top: 75px;
   padding-bottom: 75px;
-  text-align: center;
+  text-align: center; /* Align text to the left for better readability */
+  max-width: 100%; /* Allow the content to use more screen width */
+  margin: 0 auto; /* Center the content */
+  padding: 0 0px; /* Use a fixed padding for consistent spacing */
+  line-height: 1.8;
+}
+
+@media (max-width: 600px) {
+  .body {
+    font-size: 18px; /* Slightly larger font size for smaller screens */
+    padding: 0 0px; 
+  }
 }
 
 .logo {
@@ -99,8 +110,8 @@ h2 {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   color: black;
-  padding-left: 200px;
-  padding-right: 200px;
+  padding-left: 50px;
+  padding-right: 50px;
   padding-bottom: 30px;
   font-size: 20px;
 }
